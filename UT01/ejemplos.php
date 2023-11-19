@@ -1,3 +1,4 @@
+<?php
 //variable
 $mi_variable = 8;
 
@@ -63,14 +64,14 @@ function prueba()
     //   que no tiene valor asignado (su valor es null)
 }
 $a = 1;
-function prueba()
+function prueba2()
 {
     global $a;
     $b = $a;
     // En este caso se le asigna a $b el valor 1
 }
 $a = 23;
-function prueba()
+function prueba3()
 {
     $a=50;
     echo $a . "<br>"; //mostrará el valor local de a, es decir 50
@@ -82,3 +83,5 @@ function contador()
     $a++;
     // Cada vez que se ejecuta la función, se incrementa el valor de $a
 }
+
+?>
