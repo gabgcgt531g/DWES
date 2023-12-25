@@ -1,14 +1,14 @@
-<!DOCTYPE html>
-<html>
+<?php
+//array bidemensional
 
-<head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Tarea UT02</title>
-</head>
+$ciclos = array(
+  "DAW" => array("PR" => "Programación", "BD" => "Bases de datos", "PMDMO" => "Programacion Multimedia"),
+  "DAM" => array("PR" => "Programación", "BD" => "Bases de datos", "DWES" => "Desarrollo web")
+);
 
-<body>
-    <?php echo "¡Hola, soy un script de PHP!"; ?>
-</body>
+//En formato [ ]
 
-</html>
+$ciclos = [
+  "DAW" => ["PR" => "Programación", "BD" => "Bases de datos", "PMDMO" => "Programacion Multimedia"],
+  "DAM" => ["PR" => "Programacion", "BD" => "Bases de datos", "DWES" => "Desarrollo web"]
+];
