@@ -4,12 +4,14 @@ $db = "proyecto";
 $user = "gestor";
 $pass = "secreto";
 $dsn = "mysql:host=$host;dbname=$db;charset=utf8mb4";
+
 try {
   $conProyecto = new PDO($dsn, $user, $pass);
   $conProyecto->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $ex) {
   die("Error en la conexión: mensaje: " . $ex->getMessage());
 }
+
 function consultarProducto($id)
 {
   global $conProyecto;
@@ -25,10 +27,12 @@ function consultarProducto($id)
   $stmt1 = null;
   return $producto;
 }
+
 function cerrar(&$con)
 {
   $con = null;
 }
+
 function cerrarTodo(&$con, &$st)
 {
   $st = null;
