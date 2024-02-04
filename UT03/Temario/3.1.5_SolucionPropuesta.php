@@ -1,8 +1,6 @@
 /**
 Enunciado:
-A partir de la página web obtenida en el ejercicio anterior, añade la opción de modificar el número de unidades del producto en cada una de las tiendas.
-Utiliza una consulta preparada para la actualización de registros en la tabla stocks. No es necesario tener en cuenta las tareas de inserción
-(no existían unidades anteriormente) y borrado (si el número final de unidades es cero).
+A partir de la página web obtenida en el ejercicio anterior, añade la opción de modificar el número de unidades del producto en cada una de las tiendas. Utiliza una consulta preparada para la actualización de registros en la tabla stocks. No es necesario tener en cuenta las tareas de inserción (no existían unidades anteriormente) y borrado (si el número final de unidades es cero).
 */
 
 <?php

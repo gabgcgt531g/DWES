@@ -13,7 +13,7 @@ try {
 function consultarProducto($id)
 {
   global $conProyecto;
-  $consulta = "select * from productos where id=:i";
+  $consulta = "select * from productos where id=1";
   $stmt1 = $conProyecto->prepare($consulta);
   try {
     $stmt1->execute([':i' => $id]);

@@ -1,7 +1,6 @@
 /**
 Enunciado:
-Modifica la página web que muestra las unidades de un producto en las distintas tiendas, obtenida en un ejercicio anterior
-utilizando MySQLi, para que use PDO.
+Modifica la página web que muestra las unidades de un producto en las distintas tiendas, obtenida en un ejercicio anterior utilizando MySQLi, para que use PDO.
 */
 
 <?php

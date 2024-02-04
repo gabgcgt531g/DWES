@@ -1,7 +1,6 @@
 /**
 Enunciado:
-Modifica la página anterior utilizando la función header para que solicite las credenciales al usuario, comprueba
-que el usuario sea "gestor" y la contraseña "secreto".
+Modifica la página anterior utilizando la función header para que solicite las credenciales al usuario, comprueba que el usuario sea "gestor" y la contraseña "secreto".
 */
 
 <?php

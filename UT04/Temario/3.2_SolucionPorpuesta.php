@@ -1,10 +1,6 @@
 /**
 Enunciado:
-Crea una página similar a la anterior, almacenando en la sesión de usuario los
-instantes de todas sus últimas visitas. Si es su primera visita, muestra un
-mensaje de bienvenida. En caso contrario, muestra la fecha y hora de todas sus
-visitas anteriores. Añade un botón a la página que permita borrar el registro
-de visitas.
+Crea una página similar a la anterior, almacenando en la sesión de usuario los instantes de todas sus últimas visitas. Si es su primera visita, muestra un mensaje de bienvenida. En caso contrario, muestra la fecha y hora de todas sus visitas anteriores. Añade un botón a la página que permita borrar el registro de visitas.
 */
 
 <?php

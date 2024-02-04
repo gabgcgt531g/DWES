@@ -1,9 +1,6 @@
 /**
 Enunciado:
-Utiliza la extensión PDO para modificar el ejercicio anterior, de tal forma
-que las credenciales del usuario se comprueben con la información de la nueva
-tabla "usuarios" creada en la base de datos "proyecto". Si no existe el usuario,
-o la contraseña es incorrecta, vuelve a pedir las credenciales al usuario.
+Utiliza la extensión PDO para modificar el ejercicio anterior, de tal forma que las credenciales del usuario se comprueben con la información de la nueva tabla "usuarios" creada en la base de datos "proyecto". Si no existe el usuario, o la contraseña es incorrecta, vuelve a pedir las credenciales al usuario.
 */
 
 <?php

@@ -1,9 +1,6 @@
 /**
 Enunciado:
-De una forma similar al anterior ejercicio de transacciones, utiliza PDO para repartir entre las tiendas las tres unidades que figuran en
-unidades, del producto con código PAPYRE62GB, en la tienda de código 1. Es decir primero con un update ponemos el número de unidades de
-unidades del producto de nombre corto PAPYRE62GB a 1 en la tienda de código 1 y luego hacemos un insert para insertar dos unidades de
-dicho producto en la tienda de código 2.
+De una forma similar al anterior ejercicio de transacciones, utiliza PDO para repartir entre las tiendas las tres unidades que figuran en unidades, del producto con código PAPYRE62GB, en la tienda de código 1. Es decir primero con un update ponemos el número de unidades de unidades del producto de nombre corto PAPYRE62GB a 1 en la tienda de código 1 y luego hacemos un insert para insertar dos unidades de dicho producto en la tienda de código 2.
 */
 
 <?php

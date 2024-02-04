@@ -1,9 +1,7 @@
 /**
 Enunciado:
-Sobre el mismo ejercicio anterior, almacena en una cookie el último instante en
-que el usuario visitó la página. Si es su primera visita, muestra un mensaje de
-bienvenida. En caso contrario, muestra la fecha y hora de su anterior visita.
-La cookie se guardará una semana.
+Sobre el mismo ejercicio anterior, almacena en una cookie el último instante en que el usuario visitó la página. Si es su primera visita, muestra un mensaje de
+bienvenida. En caso contrario, muestra la fecha y hora de su anterior visita. La cookie se guardará una semana.
 */
 
 <?php

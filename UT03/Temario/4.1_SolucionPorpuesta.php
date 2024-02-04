@@ -1,8 +1,6 @@
 /**
 Enunciado:
-Crea una página web en la que se muestren las unidades existentes de un determinado producto en cada una de las tiendas.
-Para seleccionar el producto concreto utiliza un cuadro de selección dentro de un formulario en esa misma página. Puedes
-usar como base los siguientes ficheros.
+Crea una página web en la que se muestren las unidades existentes de un determinado producto en cada una de las tiendas. Para seleccionar el producto concreto utiliza un cuadro de selección dentro de un formulario en esa misma página. Puedes usar como base los siguientes ficheros.
 */
 
 <?php
