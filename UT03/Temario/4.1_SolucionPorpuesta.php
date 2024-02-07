@@ -23,8 +23,7 @@ function pintarBoton()
 {
   global $error;
   if (!$error)
-    echo "<a href='{$_SERVER['PHP_SELF']}' class='btn btn-success mb-
-2'>Consultar Otro Artículo</a>";
+    echo "<a href='{$_SERVER['PHP_SELF']}' class='btn btn-success mb-2'>Consultar Otro Artículo</a>";
 }
 ?>
 <!doctype html>
@@ -32,12 +31,10 @@ function pintarBoton()
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0,
-maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- css para usar Bootstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifj
-h" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <title>Ejercicio Tema 3: Excepciones</title>
 </head>
 
@@ -47,8 +44,7 @@ h" crossorigin="anonymous">
     <?php
     if (isset($_POST['enviar']) && !$error) { //hemos enviado el formulario para consultar las unidades
       $codigo = $_POST['producto'];
-      $consulta = "select unidades, tienda, producto, tiendas.nombre as
-nombreTienda from stocks, tiendas where tienda=tiendas.id AND producto=:prod";
+      $consulta = "select unidades, tienda, producto, tiendas.nombre as nombreTienda from stocks, tiendas where tienda=tiendas.id AND producto=:prod";
       $consulta1 = "select nombre , nombre_corto from productos where id=:id";
       $stmt = $conProyecto->prepare($consulta);
       $stmt1 = $conProyecto->prepare($consulta1);
@@ -74,8 +70,7 @@ nombreTienda from stocks, tiendas where tienda=tiendas.id AND producto=:prod";
         pintarBoton();
         echo "<table class='table table-striped table-dark'>";
         echo "<thead>";
-        echo "<tr class='font-weight-bold'><th class='text-center'>Nombre
-Tienda</th>";
+        echo "<tr class='font-weight-bold'><th class='text-center'>Nombre Tienda</th>";
         echo "<th>Unidades</th><th class='text-center'>Acciones</th></tr>";
         echo "</thead>";
         echo "<tbody>";
@@ -83,15 +78,12 @@ Tienda</th>";
           echo "<tr class='text-center'><td>$filas->nombreTienda</td>";
           echo "<td class='text-center m-auto'>";
           //creamos el formulario para modificar stock
-          echo "<form name='a' action='{$_SERVER['PHP_SELF']}'
-method='POST' class='form-inline'>";
-          echo "<input type='number' class='form-control' step='1' min='0'
-name='stock' value='{$filas->unidades}'>";
+          echo "<form name='a' action='{$_SERVER['PHP_SELF']}' method='POST' class='form-inline'>";
+          echo "<input type='number' class='form-control' step='1' min='0'name='stock' value='{$filas->unidades}'>";
           echo "<input type='hidden' name='ct' value='{$filas->tienda}'>";
           echo "<input type='hidden' name='cp' value='{$filas->producto}'>";
           echo "</td><td>";
-          echo "<input type='submit' class='btn btn-warning ml-2'
-name='enviar1' value='Actualizar'>";
+          echo "<input type='submit' class='btn btn-warning ml-2'name='enviar1' value='Actualizar'>";
           echo "</form>";
           echo "</td>";
           echo "</tr>";
@@ -107,8 +99,7 @@ name='enviar1' value='Actualizar'>";
       $codTienda = $_POST['ct'];
       $codProducto = $_POST['cp'];
       $unidades = $_POST['stock'];
-      $update = "update stocks set unidades=:u where producto=:p AND
-tienda=:t";
+      $update = "update stocks set unidades=:u where producto=:p AND tienda=:t";
       $stmt = $conProyecto->prepare($update);
       try {
         $stmt->execute([':u' => $unidades, ':p' => $codProducto, ':t' =>
@@ -119,8 +110,7 @@ tienda=:t";
         $conProyecto = null;
       }
       if (!$error) {
-        echo "<p class='font-weight-bold text-success mt-3'>Unidades
-Actualizadas Correctamente</p>";
+        echo "<p class='font-weight-bold text-success mt-3'>Unidades Actualizadas Correctamente</p>";
         $stmt = null;
         $conProyecto = null;
         pintarBoton();
@@ -133,8 +123,7 @@ Actualizadas Correctamente</p>";
           <select class="form-control" id="p" name="producto">
             <?php
             if (!$error) {
-              $consulta = "select id, nombre, nombre_corto from productos
-order by nombre";
+              $consulta = "select id, nombre, nombre_corto from productos order by nombre";
               $stmt = $conProyecto->prepare($consulta);
               try {
                 $stmt->execute();
@@ -144,8 +133,7 @@ order by nombre";
                 $conProyecto = null;
               }
               while ($filas = $stmt->fetch(PDO::FETCH_OBJ)) {
-                echo "<option value='{$filas->id}'>$filas-
->nombre</option>";
+                echo "<option value='{$filas->id}'>$filas->nombre</option>";
               }
               //cerramos las conexiones.
               $stmt = null;
@@ -157,11 +145,9 @@ order by nombre";
         <div class="mt-2">
           <?php
           if (!$error) { //si hay errores desactivo el boton enviar.
-            echo "<input type='submit' class='btn btn-info mr-3'
-value='Consultar Stock' name='enviar'>";
+            echo "<input type='submit' class='btn btn-info mr-3'value='Consultar Stock' name='enviar'>";
           } else {
-            echo "<input type='submit' class='btn btn-info mr-3'
-value='Consultar Stock' name='enviar' disabled>";
+            echo "<input type='submit' class='btn btn-info mr-3'value='Consultar Stock' name='enviar' disabled>";
           }
           ?>
         </div>
@@ -169,8 +155,7 @@ value='Consultar Stock' name='enviar' disabled>";
   </div>
 <?php }
     if ($error) {
-      echo "<div class='container mt-3'><p class='text-danger font-weightbold'>$
-mensaje</p></div>";
+      echo "<div class='container mt-3'><p class='text-danger font-weightbold'>$mensaje</p></div>";
     } ?>
 </body>
 
