@@ -46,8 +46,7 @@ h" crossorigin="anonymous">
         <p class="card-text"><span class='font-weight-bold'>Usuario:</span>
           "<?php echo $_SERVER['PHP_AUTH_USER'] ?>
           "</p>
-        <p class="card-text"><span class='font-weightbold'>
-            Contraseña:</span>
+        <p class="card-text"><span class='font-weightbold'>Contraseña:</span>
           "<?php echo $_SERVER['PHP_AUTH_PW'] ?>"</p>
       </div>
     </div>
