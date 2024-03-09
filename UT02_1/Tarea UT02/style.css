@@ -1,0 +1,61 @@
+body {
+  background-color: rgb(30, 30, 30);
+  color: white;
+  font-family: 'JetBrains Mono', 'Consolas';
+  font-size: 14px;
+  width: 92%;
+  
+}
+
+
+h1 {
+  background-color: rgb(42, 42, 42);
+  padding: 0 2%;
+  top: 0;
+  color: lightgoldenrodyellow;
+  font-size: 35px;
+  border-radius: 8px;
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: center;
+  
+}
+
+.agenda{
+  background-color: rgb(42, 42, 42);
+  padding: 1% 2%;
+  position:relative;
+  border-radius: 8px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+button, input[type="text"]{
+  border-radius: 5px;
+}
+
+table, tr, td{
+  color: lightblue;
+}
+
+fieldset[name="aviso"]{
+  color: lightcoral;
+}
+button[name="aniadir"]{
+  margin-top: 10px;
+  background-color: rgb(198, 220, 227);
+}
+button[name="limpiar"]{
+  margin-top: 10px;
+  background-color: lightgoldenrodyellow;
+}
+button[name="vaciar"]{
+  margin-top: 10px;
+  background-color: rgb(231, 188, 188);
+}
+
+.fieldset{
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
