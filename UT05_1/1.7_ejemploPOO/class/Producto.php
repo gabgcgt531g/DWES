@@ -8,7 +8,7 @@ class Producto extends Conexion
     private $pvp;
     private $familia;
     private $descripcion;
-    
+
 
     public function __construct()
     {
