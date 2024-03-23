@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<types>
+  <xsd:schema targetNamespace="http://localhost/dwes/ut6">
+      <xsd:complexType name="direccion">
+          <xsd:all>
+              <xsd:element name="ciudad" type="xsd:string" />
+              <xsd:element name="calle" type="xsd:string" />
+              <xsd:element name="numero" type="xsd:string" />
+              <xsd:element name="piso" type="xsd:string" />
+              <xsd:element name="CP" type="xsd:string" />
+          </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="usuario">
+          <xsd:all>
+              <xsd:element name="id" type="xsd:int" />
+              <xsd:element name="nombre" type="xsd:string" />
+              <xsd:element name="direccion" type="tns:direccion" />
+              <xsd:element name="email" type="xsd:string" />
+          </xsd:all>
+      </xsd:complexType>
+  </xsd:schema>
+</types>
