@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<soap:Envelope 
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:ns1=" " 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" 
+    soap:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+>
+<soap:Body>
+    <ns1:getPVPResponse>
+        <return xsi:type="xsd:string">10.20</return>
+    </ns1:getPVPResponse>
+</soap:Body>
+</soap:Envelope> 
