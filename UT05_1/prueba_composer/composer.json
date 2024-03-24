@@ -1,0 +1,20 @@
+{
+    "name": "gabgc/prueba_composer",
+    "description": "blade",
+    "type": "blade",
+    "require": {
+        "laravel/breeze": "\u001b[6~"
+    },
+    "license": "gpl",
+    "autoload": {
+        "psr-4": {
+            "Gabgc\\PruebaComposer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "gabgcgt531g",
+            "email": "gabgc.z930@gmail.com"
+        }
+    ]
+}
