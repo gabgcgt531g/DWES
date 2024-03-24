@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<definitions name="WSDLgetPVP" targetNamespace="http://localhost/dwes/ut6" 
+    xmlns:tns="http://localhost/dwes/ut6" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+    xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" 
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+    xmlns="http://schemas.xmlsoap.org/wsdl/">
+    <message name="getPVPRequest">
+        <part name="codigo" type="xsd:string" />
+    </message>
+    <message name="getPVPResponse">
+        <part name="PVP" element="xsd:float" />
+    </message>
+    <portType name="getPVPPortType">
+        <operation name="getPVP">
+            <input message="tns:getPVPRequest" />
+            <output message="tns:getPVPResponse" />
+        </operation>
+    </portType>
+    <binding name="getPVPBinding" type="tns:getPVPPortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http" />
+        <operation name="getPVP">
+            <soap:operation soapAction="http://localhost/dwes/ut6/getPVP.php?getPVP" />
+            <input>
+                <soap:body namespace="http://localhost/dwes/ut6" 
+                    use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </input>
+            <output>
+                <soap:body namespace="http://localhost/dwes/ut6" 
+                    use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </output>
+        </operation>
+    </binding>
+    <service name="getPVPService">
+        <port name="getPVPPort" binding="tns:getPVPBinding ">
+            <soap:address location="http://localhost/dwes/ut6/getPVP.php" />
+        </port>
+    </service>
+</definitions>

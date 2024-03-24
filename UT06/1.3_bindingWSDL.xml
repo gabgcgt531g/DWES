@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions 
+  name="WSDLusuario" 
+  targetNamespace="http://localhost/dwes/ut6"
+  xmlns:tns="http://localhost/dwes/ut6" 
+  xmlns="http://schemas.xmlsoap.org/wsdl/" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <binding name="usuarioBinding" type="tns:usuarioPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getUsuario">
+        <soap:operation soapAction="http://localhost/dwes/ut6/getUsuario.php?getUsuario" />
+        <input>
+            <soap:body use="encoded" 
+                encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" 
+                namespace="http://localhost/dwes/ut6" />
+        </input>
+        <output>
+            <soap:body use="encoded" 
+                encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" 
+                namespace="http://localhost/dwes/ut6" />
+        </output>
+    </operation>
+  </binding>
+</definitions>
