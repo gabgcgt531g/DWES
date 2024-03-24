@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <types>
-  <xsd:schema targetNamespace="http://localhost/dwes/ut6">
+  <xsd:schema xmlns:xsd="http://localhost/dwes/tema_6">
       <xsd:complexType name="direccion">
           <xsd:all>
               <xsd:element name="ciudad" type="xsd:string" />
