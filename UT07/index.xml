@@ -1,0 +1,6 @@
+
+// Distintas formas para crear el objeto 
+//  XMLHttpRequest según el navegador
+xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+xmlhttp = new XMLHttpRequest();
