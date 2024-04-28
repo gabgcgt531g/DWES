@@ -71,19 +71,19 @@ YsJQuery::usePlugin(YsJQueryConstant::PLUGIN_JQVALIDATE);
     </div>
     <?php
     echo
-        YsJQuery::newInstance()
-            ->onClick()
-            ->in("#enviar")
-            ->execute(
-                YsJQValidate::build()->in('#miForm')
-                    ->_rules(
-                        [
-                            'usu' => ['required' => true, 'minlength' => 4],
-                            'mail' => ['required' => true, 'email' => true],
-                            'pass2' => ['required' => true, 'minlength' => 6, 'equalTo' => '#pass1']
-                        ]
-                    )
-            );
+    YsJQuery::newInstance()
+        ->onClick()
+        ->in("#enviar")
+        ->execute(
+            YsJQValidate::build()->in('#miForm')
+                ->_rules(
+                    [
+                        'usu' => ['required' => true, 'minlength' => 4],
+                        'mail' => ['required' => true, 'email' => true],
+                        'pass2' => ['required' => true, 'minlength' => 6, 'equalTo' => '#pass1']
+                    ]
+                )
+        );
 
     ?>
 </body>
