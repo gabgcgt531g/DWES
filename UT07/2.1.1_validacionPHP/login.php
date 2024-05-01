@@ -24,7 +24,9 @@
           <form name='login' method='POST' action='<?php echo $_SERVER['PHP_SELF']; ?>'>
             <div class="input-group form-group">
               <div class="input-group-prepend">
-                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                <span class="input-group-text">
+                  <i class="fas fa-user"></i>
+                </span>
               </div>
               <input type="text" class="form-control" placeholder="usuario" id='usu' name='usu' value='<?php echo isset($_POST['usu']) ? $_POST['usu'] : '' ?>' required>
               <span id='errUsu' for='usu' class='<?php echo (!isset($_POST['enviar']) || validarNombre($_POST['usu'])) ? "d-none" : "input-group form-group text-danger" ?>'>

@@ -1,10 +1,7 @@
 <?php
-
-
 class Conexion
 {
     protected static $conexion;
-
 
     public function __construct()
     {
@@ -17,9 +14,12 @@ class Conexion
     {
         $user = "gestor";
         $pass = "secreto";
-        $base='proyecto';
-        $dsn = "mysql:host=localhost;dbname=$base;charset=utf8mb4";
-        
+        $base = 'proyecto';
+        $dsn =
+            "mysql:host=localhost;
+            dbname=$base;
+            charset=utf8mb4";
+
         try {
             self::$conexion = new PDO($dsn, $user, $pass);
             self::$conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -28,4 +28,3 @@ class Conexion
         }
     }
 }
-
